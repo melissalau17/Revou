@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <section>
+        <div id="body-content" class="full-container">
+            <h2 id="data-pengguna">Kalkulator BMI</h2>
+            <div class="column">
+                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.</p>
+                <div class="row-1">
+            <div class="calculator">
+           <form name="bmi-form" id="bmi-form" class="form">
+            <div class="jenis-kelamin">
+                <strong>Jenis Kelamin</strong>
+                <input type="radio" name="jenis-kelamin" value="l" required="true">
+                <label for="jenis-kelamin">Pria</label>
+                <input type="radio" name="jenis-kelamin" value="p" required="true">
+                <label for="jenis-kelamin">Wanita</label>
+            </div>
+            <div class="form-group">
+                <label for="berat-badan">Berat Badan (Kg)</label>
+             </div>
+                <div class="icon-input">
+                    <i class="fa-solid fa-pencil"></i>
+                <input name="berat-badan" type="text" required="true">
+                </div>
+            <div class="form-group">
+                <label for="usia">Usia (Tahun)</label>
+                <div class="icon-input">
+                <i class="fa-solid fa-pencil"></i>
+                <input type="text" name="usia" required="true" placeholder="Minimal 18 tahun">
+            </div>
+            </div>
+            <div class="form-group">
+                <label for="tinggi-badan">Tinggi badan (cm)</label>
+                <div class="icon-input">
+                    <i class="fa-solid fa-pencil"></i>
+                <input type="text" name="tinggi-badan" required="true">
+                </div>
+                </div>
+                <br>
+            <div class="button-group">
+                <button type="button" class="button" onclick="hitungbmi();">Hitung BMI</button>
+                <button type="button" class="button reset" onclick="resetbmi();">Reset</button>
+            </div>
+            </form>
+            </div>
+        </div>
+    </section>
+    <section>
+            <div class="column">
+                <div class="row">
+                    <div id="fitur" class="fitur">
+                   <h4>Keunggulan fitur</h4> 
+                   <ol>
+                    <li>Menghitung berat badan</li>
+                    <li>Menentukan kategori berat badan ideal atau tidak</li>
+                    <li>Mempersiapkan program penurunan berat badan</li>
+                   </ol>
+                </div>
+            </div>
+            <br>
+            <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p>
+           <br>
+           <p id="hasil">Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M"<sup>2</sup>"."</p>
+            </div>
+            </div>
+            <hr>
+            <div class="column" id="content-hasil">
+                <h3>Hasil</h3>
+                <div class="row">
+                    <div class="hasil-bmi">
+                        <div class="row-1 bg-gray-1">
+                            <br>
+                    <form name="hasil" id="hasil" class="form">
+                    <h4 id="hasil-berat-badan">Berat Badan Lebih</p>
+                    <h1 id="hasil-bmi">24.7</h1>
+                    <br>
+                    <p class="text-center" id="hasil-keterangan">Anda memiliki berat badan berlebih</p>
+                    <br>
+                    <div class="button-bmi">
+                        <button id="download-bmi" type="button" class="button" target="_blank" download="hasilBMI" href="data:application/pdf;base64,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aKlkL2WoSSWq+64xRiad5WZrJSStTQuqbios3alOZHZNTpK1TLGAVjyQgFytkZSssJClNBozVbf0h4XErUVJ+ihjJC+FaEVOkhTobtn/qKARLWULhFnTcE3EVtQNZT623wM1Uwd9+iWZkdC3FpQmB92vmVAo9y+Cd0q7jAKMlkIUOa5QS5p/mJ3aqEBSNbbIdsTm/nam/wBEB7ukCmVuZHN0cmVhbQplbmRvYmoKNyAwIG9iago8PC9UeXBlL1BhZ2UvTWVkaWFCb3hbMCAwIDU5NSA4NDJdL1Jlc291cmNlczw8L0ZvbnQ8PC9GMSAzIDAgUi9GMiA0IDAgUj4+L1hPYmplY3Q8PC9pbWcwIDEgMCBSL2ltZzEgMiAwIFI+Pj4+L0NvbnRlbnRzIDUgMCBSL1BhcmVudCA2IDAgUj4+CmVuZG9iagozIDAgb2JqCjw8L1R5cGUvRm9udC9TdWJ0eXBlL1R5cGUxL0Jhc2VGb250L0hlbHZldGljYS1Cb2xkL0VuY29kaW5nL1dpbkFuc2lFbmNvZGluZz4+CmVuZG9iago0IDAgb2JqCjw8L1R5cGUvRm9udC9TdWJ0eXBlL1R5cGUxL0Jhc2VGb250L0hlbHZldGljYS9FbmNvZGluZy9XaW5BbnNpRW5jb2Rpbmc+PgplbmRvYmoKNiAwIG9iago8PC9UeXBlL1BhZ2VzL0NvdW50IDEvS2lkc1s3IDAgUl0+PgplbmRvYmoKOCAwIG9iago8PC9UeXBlL0NhdGFsb2cvUGFnZXMgNiAwIFI+PgplbmRvYmoKOSAwIG9iago8PC9Qcm9kdWNlcihpVGV4dFNoYXJwkiA1LjUuMTMuMiCpMjAwMC0yMDIwIGlUZXh0IEdyb3VwIE5WIFwoQUdQTC12ZXJzaW9uXCkpL0NyZWF0aW9uRGF0ZShEOjIwMjMwMzE5MDA0NTU2KzA3JzAwJykvTW9kRGF0ZShEOjIwMjMwMzE5MDA0NTU2KzA3JzAwJyk+PgplbmRvYmoKeHJlZgowIDEwCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAyMTY3IDAwMDAwIG4gCjAwMDAwMDU3MjkgMDAwMDAgbiAKMDAwMDAwNTgyMiAwMDAwMCBuIAowMDAwMDA0NzY0IDAwMDAwIG4gCjAwMDAwMDU5MTAgMDAwMDAgbiAKMDAwMDAwNTU3NCAwMDAwMCBuIAowMDAwMDA1OTYxIDAwMDAwIG4gCjAwMDAwMDYwMDYgMDAwMDAgbiAKdHJhaWxlcgo8PC9TaXplIDEwL1Jvb3QgOCAwIFIvSW5mbyA5IDAgUi9JRCBbPDg1ZTkyOWNmYzU0MjNjOGY5ZmU4Zjg0ODk3ZDZkMmFiPjw4NWU5MjljZmM1NDIzYzhmOWZlOGY4NDg5N2Q2ZDJhYj5dPj4KJWlUZXh0LTUuNS4xMy4yCnN0YXJ0eHJlZgo2MTcxCiUlRU9GCg==">Download Hasil BMI</button>
+                    </div>
+                    </div>
+                    </div>
+        <div class="column"
+        <p id="kualitas-bmi">Hasil BMI diantara 23 dan 25</p>
+        <p id="saran-bmi">Anda berada dalam kategori overweight atau berat badan berlebih.
+            <br>
+            Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makanan yang dikonsumsi dan berolahraga.
+            <br>
+            Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.
+        </p>
+           <div class="button-group">
+                    <button href="https://play.google.com/store/apps/details?id=com.rsmurniteguh.mobileapps.droid" target="_blank" class="button">Konsultasi Ahli Gizi Via Aplikasi</button>
+                    <button href="https://www.rsmurniteguh.com/id/Entity?type=ONLINE_APPOINTMENT&poly=PSBSGK" target="_blank" class="button">Registrasi Online Ahli Gizi</button>
+            </div>
+            <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
+            </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div class="row-3" id="contentoverweight">
+                        <br>
+                        <h4>Beberapa penyakit yang berasal dari kegemukan</h4>
+                        <ol>
+                            <li>Diabetes</li>
+                            <li>Hipertensi</li>
+                            <li>Sakit Jantung</li>
+                            <li>Osteoarthritis</li>
+                        </ol>
+                        </div>
+                    <div class="button-group">
+                        <button class="button" href="https://play.google.com/store/apps/details?id=com.rsmurniteguh.mobileapps.droid" target="_blank">Konsultasi Dokter Via Aplikasi</button>
+                        <button class="button" href="https://www.rsmurniteguh.com/id/Entity?type=ONLINE_APPOINTMENT&poly=PSBUMU" target="_blank">Registrasi Online Sekarang</button>
+                    </div>
+                    </div>
+                    <div class="row-3" id="contentunderweight">
+                        <br>
+                        <h4>Berat rendah dapat menyebabkan berbagai masalah penyakit</h4>
+                        <ol>
+                            <li>Infertilitas</li>
+                            <li>Anemia</li>
+                            <li>Osteoporosis</li>
+                            <li>Sistem Imun Lemah</li>
+                        </ol>
+                        </div>
+                    <div class="button-group">
+                        <button class="button" href="https://play.google.com/store/apps/details?id=com.rsmurniteguh.mobileapps.droid" target="_blank">Konsultasi Dokter Via Aplikasi</button>
+                        <button class="button" href="https://www.rsmurniteguh.com/id/Entity?type=ONLINE_APPOINTMENT&poly=PSBUMU" target="_blank">Registrasi Online Sekarang</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+             <div class="row">
+        <h4>Download Aplikasi</h4>
+        <a href="https://play.google.com/store/apps/details?id=com.rsmurniteguh.mobileapps.droid" target="_blank" class="button-download">
+            <img src="https://play.google.com/store/apps/details?id=com.rsmurniteguh.mobileapps.droid" alt="Murni Teguh" title="Aplikasi Murni Teguh" class="button-download">
+        </a>
+        <a href="https://apps.apple.com/id/app/murni-teguh/id1603544635" target="_blank" class="button-download">
+            <img src="https://apps.apple.com/id/app/murni-teguh/id1603544635" alt="Murni Teguh" title="Aplikasi Murni Teguh" class="button-download">
+        </a>
+        </div>
+    </div>
+    </section>
+    </body>
+</html>

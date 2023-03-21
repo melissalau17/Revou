@@ -1,0 +1,123 @@
+
+.div {
+    display: block;
+    column-gap: 10px 30px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.full-container {
+    width: 100%;
+    margin: 0px auto;
+}
+
+.form {
+    background-color: rgb(240, 240, 240);
+    display: block;
+    margin-top: 0cm;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+font-size: 14px;
+height: 100%;
+line-height: 20px;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #333;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 90%;
+}
+
+.icon {
+    width: 1%;
+    border: 1px solid gray;
+}
+
+.column, .calculator, .hasil-bmi {
+    float: left;
+    width: 50%;
+  }
+
+  ol {
+    list-style-type: decimal;
+    -webkit-padding-start: 15px;
+    font-family: Lato-Light, sans-serif;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+  ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+    .row {
+        margin-right: -15px;
+        margin-left: -15px;
+  }
+  
+  .row {
+    margin: 0px;
+  }
+
+  button {
+    display: inline-block;
+  margin: 2px 1px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  }
+
+  .button {
+    background: rgb(89, 188, 220);
+    color: white;
+    display: inline-block;
+  }
+
+  .button:hover {
+    background: rgb(11, 121, 157);
+  }
+
+  .button.reset {
+    background: white;
+    color: black;
+    border: 1px solid lightgray;
+  }
+
+  .button.reset:hover {
+    background: lightgray;
+  }
+
+  input .form-group {
+    width: 30%;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+  }
+
+  input[type=text]:focus {
+    border: 0.5 px solid rgb(212, 244, 255);
+  }
