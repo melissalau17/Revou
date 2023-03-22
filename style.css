@@ -1,0 +1,119 @@
+.form {
+  background-color: rgb(240, 240, 240);
+  display: block;
+  margin-top: 0cm;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+h2 {
+ margin: 0 0 50px 0;
+}
+
+html, body {
+  font-size: 14px;
+  height: 100%;
+  line-height: 20px;
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #333;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 90%;
+}
+
+.icon {
+  width: 1%;
+  margin-top: 10px;
+  float: left;
+  margin-right: 14px;
+}
+
+ol {
+  list-style-type: decimal;
+  -webkit-padding-start: 15px;
+  font-family: Lato-Light, sans-serif;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ol, ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.custom-button {
+  display: inline-block;
+  margin: 2px 1px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+}
+
+.custom-button {
+  background: rgb(89, 188, 220);
+  color: white;
+  display: inline-block;
+}
+
+.custom-button:hover {
+  background: rgb(11, 121, 157);
+}
+
+.custom-button.reset {
+  background: white;
+  color: black;
+  border: 1px solid lightgray;
+}
+
+.custom-button.reset:hover {
+  background: lightgray;
+}
+
+input .form-group {
+  width: 30%;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+input[type=text]:focus {
+  border: 0.5 px solid rgb(212, 244, 255);
+}
+
+.vl {
+  border-left: 1px solid lightgrey;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+
+#contentoverweight, #contentunderweight{
+  text-align: center;
+}
+
+#contentunderweight {
+  display: none;
+}
+
+.application-button{
+  text-align: center;
+}
