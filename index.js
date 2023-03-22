@@ -30,7 +30,7 @@ function hitungbmi() {
         result = 'Extremely obese';
     }
     
-    document.getElementById("berat-badan").innerHTML = topresult;
+    document.getElementById("hasil-berat-badan").innerHTML = topresult;
     document.getElementById("hasil-bmi").innerHTML = bmi;
     document.getElementById("hasil-keterangan").innerHTML = result;
 }
