@@ -102,6 +102,6 @@ input[type=text]:focus {
   display: none;
 }
 
-#normal-quality, #over-quality, #under-quality {
+#normal-quality, #over-quality, #under-quality, #obese-quality {
   display: none;
 }
