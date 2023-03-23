@@ -30,11 +30,17 @@ function hitungbmi() {
         $("#over-quality").show();
         $(".application-button").show();
     } else if(29.91 <= bmi && bmi <= 34.9) {
-        topresult = "Berat badan sangat lebih";
+        topresult = "Obesitas";
         result = 'Obese';
+        $("#contentoverweight").show();
+        $("#obese-quality").show();
+        $(".application-button").show();
     } else if(34.91 <= bmi) {
-        topresult = "Berat badan kelebihan banyak";
+        topresult = "Obesitas";
         result = 'Extremely obese';
+        $("#contentoverweight").show();
+        $("#obese-quality").show();
+        $(".application-button").show();
     }
     
     document.getElementById("hasil-berat-badan").innerHTML = topresult;
@@ -53,6 +59,7 @@ function resetbmi(){
 
     $("#contentoverweight").hide();
     $("#contentunderweight").hide();
+    $("#obese-quality").hide();
     $("#over-quality").hide();
     $("#normal-quality").hide();
     $("#under-quality").hide();
