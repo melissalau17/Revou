@@ -56,6 +56,9 @@ function resetbmi(){
     document.getElementById("berat-badan").value = "";
     document.getElementById("tinggi-badan").value = "";
    
+    document.getElementById("hasil-berat-badan").innerHTML = "Keterangan";
+    document.getElementById("hasil-bmi").innerHTML = "0.0";
+    document.getElementById("hasil-keterangan").innerHTML = "Keterangan";
 
     $("#contentoverweight").hide();
     $("#contentunderweight").hide();
