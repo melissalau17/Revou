@@ -41,7 +41,6 @@ input[type="text"] {
 ol {
   list-style-type: decimal;
   -webkit-padding-start: 15px;
-  font-family: Lato-Light, sans-serif;
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -51,6 +50,7 @@ ol {
 
 ul {
   list-style-type: none;
+  text-align;
 }
 
 ol, ul {
