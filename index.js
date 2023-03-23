@@ -16,16 +16,23 @@ function hitungbmi() {
         topresult = "Berat badan kurang";
         result = 'Underweight';
         $("#contentunderweight").show();
+        $("#under-quality").show();
+        $(".application-button").show();
     } else if(18.5 <= bmi && bmi <= 24.9) {
         topresult = "Berat badan sedang";
         result = 'Healthy';
-    } else if(25 <= bmi && bmi <= 29.9) {
+        $("#normal-quality").show();
+        $(".application-button").show();
+    } else if(24.91 <= bmi && bmi <= 29.9) {
         topresult = "Berat badan lebih";
         result = 'Overweight';
-    } else if(30 <= bmi && bmi <= 34.9) {
+        $("#contentoverweight").show();
+        $("#over-quality").show();
+        $(".application-button").show();
+    } else if(29.91 <= bmi && bmi <= 34.9) {
         topresult = "Berat badan sangat lebih";
         result = 'Obese';
-    } else if(35 <= bmi) {
+    } else if(34.91 <= bmi) {
         topresult = "Berat badan kelebihan banyak";
         result = 'Extremely obese';
     }
@@ -36,11 +43,18 @@ function hitungbmi() {
 }
 
 function resetbmi(){
+   
     document.getElementById("jenis_pria").checked = false;
     document.getElementById("jenis_wanita").checked = false;
     document.getElementById("usia").value = "";
     document.getElementById("berat-badan").value = "";
     document.getElementById("tinggi-badan").value = "";
+   
 
+    $("#contentoverweight").hide();
     $("#contentunderweight").hide();
+    $("#over-quality").hide();
+    $("#normal-quality").hide();
+    $("#under-quality").hide();
+    $(".application-button").hide();
 }
