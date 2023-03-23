@@ -50,7 +50,7 @@ ol {
 
 ul {
   list-style-type: none;
-  text-align;
+  text-align: center;
 }
 
 ol, ul {
@@ -97,23 +97,11 @@ input[type=text]:focus {
   border: 0.5 px solid rgb(212, 244, 255);
 }
 
-.vl {
-  border-left: 1px solid lightgrey;
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  margin-left: -3px;
-  top: 0;
-}
-
-#contentoverweight, #contentunderweight{
+#contentoverweight, #contentunderweight, .application-button {
   text-align: center;
-}
-
-#contentunderweight {
   display: none;
 }
 
-.application-button{
-  text-align: center;
+#normal-quality, #over-quality, #under-quality {
+  display: none;
 }
