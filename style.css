@@ -20,6 +20,10 @@ body {
   font-weight: 300;
 }
 
+.note {
+  font-style: italic;
+}
+
 #bmi-form {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -98,7 +102,7 @@ input[type=text]:focus {
   border: 0.5 px solid rgb(212, 244, 255);
 }
 
-#contentoverweight, #contentunderweight, .application-button {
+#contentoverweight, #contentunderweight, #contentobese, .application-button {
   text-align: center;
   display: none;
 }
