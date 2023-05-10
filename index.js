@@ -68,3 +68,9 @@ function resetbmi(){
     $("#under-quality").hide();
     $(".application-button").hide();
 }
+
+    if (height === "/^[2-9]' ?:\d|1[0-1]?$/" || isNaN(height)) {
+        result.innerHTML = "Provide a valid Height!"}
+  
+    else if (weight === "/^\d{2,3} ?kg$/" || isNaN(weight)) {
+        result.innerHTML = "Provide a valid Weight!"};
