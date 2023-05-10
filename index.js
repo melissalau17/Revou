@@ -15,31 +15,25 @@ function hitungbmi() {
     if(bmi<18.5) {
         topresult = "Berat badan kurang";
         result = 'Underweight';
-        $("#contentunderweight").show();
         $("#under-quality").show();
+        $("#contentunderweight").show();
         $(".application-button").show();
-    } else if(18.5 <= bmi && bmi <= 24.9) {
+    } else if(18.5 <= bmi && bmi <= 22.9) {
         topresult = "Berat badan sedang";
         result = 'Healthy';
         $("#normal-quality").show();
         $(".application-button").show();
-    } else if(24.91 <= bmi && bmi <= 29.9) {
+    } else if(22.91 <= bmi && bmi <= 24.9) {
         topresult = "Berat badan lebih";
         result = 'Overweight';
-        $("#contentoverweight").show();
         $("#over-quality").show();
+        $("#contentoverweight").show();
         $(".application-button").show();
-    } else if(29.91 <= bmi && bmi <= 34.9) {
+    } else if(24.91 <= bmi) {
         topresult = "Obesitas";
         result = 'Obese';
-        $("#contentoverweight").show();
         $("#obese-quality").show();
-        $(".application-button").show();
-    } else if(34.91 <= bmi) {
-        topresult = "Obesitas";
-        result = 'Extremely obese';
-        $("#contentoverweight").show();
-        $("#obese-quality").show();
+        $("#contentobese").show();
         $(".application-button").show();
     }
     
@@ -62,6 +56,7 @@ function resetbmi(){
 
     $("#contentoverweight").hide();
     $("#contentunderweight").hide();
+    $("#contentobese").hide();
     $("#obese-quality").hide();
     $("#over-quality").hide();
     $("#normal-quality").hide();
